@@ -29,7 +29,7 @@ const controlSearch = async () => {
         renderLoader(elements.searchRes);
 
         try {
-            // 4) Search for recipes
+            // 4) Search for recipes 
             await state.search.getResults();
 
             // 5) Render results on UI
@@ -71,8 +71,9 @@ const controlRecipe = async () => {
         state.recipe = new Recipe(id);
 
         try {
-            // Get recipe data
+            // Get recipe data and parse ingredients
             await state.recipe.getRecipe();
+            state.recipe.parseIngredients();
 
             // Calculate servings and time
             state.recipe.calcTime();
