@@ -16,7 +16,7 @@ import { elements, renderLoader, clearLoader } from "./views/base";
  */
 
 const state = {};
-window.state = state;
+
 /*
  * SEARCH CONTROLLER
  */
@@ -194,9 +194,6 @@ window.addEventListener('load', () => {
     // Render the existing likes
     state.likes.likes.forEach(like => likesView.renderLike(like));
 });
-
-
-
 
 
 // Handling recipe button clicks 
